@@ -1,4 +1,4 @@
-# 📔 NotebookPlus — Guía para Principiantes
+# NotebookPlus — Guía para Principiantes
 
 Proyecto base con **React + Tailwind CSS + Firebase**.
 
@@ -15,7 +15,7 @@ Proyecto base con **React + Tailwind CSS + Firebase**.
 
 ---
 
-## 📁 Estructura del proyecto
+## Estructura del proyecto
 
 ```
 src/
@@ -34,7 +34,7 @@ src/
 
 ---
 
-## 🚀 Pasos para arrancar el proyecto
+## Pasos para arrancar el proyecto
 
 ### 1. Instalar dependencias
 ```bash
@@ -63,7 +63,7 @@ Abre tu navegador en: **http://localhost:5173**
 
 ---
 
-## ✏️ Cómo agregar una nueva página
+## Cómo agregar una nueva página
 
 1. Crea un archivo en `src/pages/MiPagina.jsx`
 2. Agrega la ruta en `src/App.jsx`:
@@ -78,7 +78,7 @@ if (path === "/mi-pagina") return <MiPagina />;
 
 ---
 
-## 🔥 Cómo usar Firestore (base de datos)
+## Cómo usar Firestore (base de datos)
 
 ```jsx
 import { db } from "../firebase/config";
@@ -98,7 +98,7 @@ snapshot.forEach((doc) => console.log(doc.id, doc.data()));
 
 ---
 
-## 📦 Scripts disponibles
+## Scripts disponibles
 
 ```bash
 npm run dev      # Inicia servidor de desarrollo
@@ -108,13 +108,16 @@ npm run preview  # Previsualiza el build de producción
 
 ---
 
-## ❓ Preguntas frecuentes
+## Preguntas frecuentes
 
 **¿Por qué no funciona Firebase?**  
 → Asegúrate de haber creado el archivo `.env` con tus credenciales reales.
 
 **¿Las clases de Tailwind no tienen efecto?**  
 → Verifica que `src/index.css` tenga `@import "tailwindcss";` y que se importe en `main.jsx`.
+
+**¿Porqué usas o qué es imgbb en `.env.example`**  
+→ Uso imgbb para almacenar las imágenes y optimizar las cargas y descargas. Es totalmente gratis. Puedes hacerte una cuenta en [ImgBB](https://imgbb.com/)
 
 **¿Cómo subo esto a internet gratis?**  
 → Usa [Firebase Hosting](https://firebase.google.com/docs/hosting) o [Vercel](https://vercel.com).
