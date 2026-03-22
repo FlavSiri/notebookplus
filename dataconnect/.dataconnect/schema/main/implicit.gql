@@ -1,0 +1,66 @@
+extend type Assignment {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Assignment", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Assignment`.`class`. It must match the value of `Class`.`id`. See `@ref` for how to customize it.
+  """
+  classId: UUID! @fdc_generated(from: "Assignment.class", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Assignment`.`user`. It must match the value of `User`.`id`. See `@ref` for how to customize it.
+  """
+  userId: UUID! @fdc_generated(from: "Assignment.user", purpose: IMPLICIT_REF_FIELD)
+}
+extend type Attachment {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Attachment", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Attachment`.`assignment`. It must match the value of `Assignment`.`id`. See `@ref` for how to customize it.
+  """
+  assignmentId: UUID @fdc_generated(from: "Attachment.assignment", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Attachment`.`class`. It must match the value of `Class`.`id`. See `@ref` for how to customize it.
+  """
+  classId: UUID @fdc_generated(from: "Attachment.class", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Attachment`.`user`. It must match the value of `User`.`id`. See `@ref` for how to customize it.
+  """
+  userId: UUID! @fdc_generated(from: "Attachment.user", purpose: IMPLICIT_REF_FIELD)
+}
+extend type Class {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Class", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Class`.`user`. It must match the value of `User`.`id`. See `@ref` for how to customize it.
+  """
+  userId: UUID! @fdc_generated(from: "Class.user", purpose: IMPLICIT_REF_FIELD)
+}
+extend type Reminder {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Reminder", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Reminder`.`assignment`. It must match the value of `Assignment`.`id`. See `@ref` for how to customize it.
+  """
+  assignmentId: UUID @fdc_generated(from: "Reminder.assignment", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Reminder`.`class`. It must match the value of `Class`.`id`. See `@ref` for how to customize it.
+  """
+  classId: UUID @fdc_generated(from: "Reminder.class", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Reminder`.`user`. It must match the value of `User`.`id`. See `@ref` for how to customize it.
+  """
+  userId: UUID! @fdc_generated(from: "Reminder.user", purpose: IMPLICIT_REF_FIELD)
+}
+extend type User {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "User", purpose: IMPLICIT_KEY_FIELD)
+}

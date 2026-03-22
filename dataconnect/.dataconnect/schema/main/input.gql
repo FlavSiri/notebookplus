@@ -1,0 +1,1741 @@
+"""
+✨ `Assignment_KeyOutput` returns the primary key fields of table type `Assignment`.
+
+It has the same format as `Assignment_Key`, but is only used as mutation return value.
+"""
+scalar Assignment_KeyOutput
+"""
+✨ `Attachment_KeyOutput` returns the primary key fields of table type `Attachment`.
+
+It has the same format as `Attachment_Key`, but is only used as mutation return value.
+"""
+scalar Attachment_KeyOutput
+"""
+✨ `Class_KeyOutput` returns the primary key fields of table type `Class`.
+
+It has the same format as `Class_Key`, but is only used as mutation return value.
+"""
+scalar Class_KeyOutput
+"""
+✨ `Reminder_KeyOutput` returns the primary key fields of table type `Reminder`.
+
+It has the same format as `Reminder_Key`, but is only used as mutation return value.
+"""
+scalar Reminder_KeyOutput
+"""
+✨ `User_KeyOutput` returns the primary key fields of table type `User`.
+
+It has the same format as `User_Key`, but is only used as mutation return value.
+"""
+scalar User_KeyOutput
+"""
+✨ Generated data input type for table 'Assignment'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Assignment_Data {
+  """
+  ✨ Generated from Field `Assignment`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Assignment`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Assignment`.`classId` of type `UUID!`
+  """
+  classId: UUID
+  """
+  ✨ `_expr` server value variant of `classId` (✨ Generated from Field `Assignment`.`classId` of type `UUID!`)
+  """
+  classId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Assignment`.`userId` of type `UUID!`
+  """
+  userId: UUID
+  """
+  ✨ `_expr` server value variant of `userId` (✨ Generated from Field `Assignment`.`userId` of type `UUID!`)
+  """
+  userId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Assignment`.`class` of type `Class!`
+  """
+  class: Class_Key
+  """
+  ✨ Generated from Field `Assignment`.`user` of type `User!`
+  """
+  user: User_Key
+  """
+  ✨ Generated from Field `Assignment`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `createdAt` (✨ Generated from Field `Assignment`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `createdAt` (✨ Generated from Field `Assignment`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `createdAt` (✨ Generated from Field `Assignment`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `Assignment`.`description` of type `String`
+  """
+  description: String
+  """
+  ✨ `_expr` server value variant of `description` (✨ Generated from Field `Assignment`.`description` of type `String`)
+  """
+  description_expr: String_Expr
+  """
+  ✨ Generated from Field `Assignment`.`dueDate` of type `Timestamp!`
+  """
+  dueDate: Timestamp
+  """
+  ✨ `_expr` server value variant of `dueDate` (✨ Generated from Field `Assignment`.`dueDate` of type `Timestamp!`)
+  """
+  dueDate_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `dueDate` (✨ Generated from Field `Assignment`.`dueDate` of type `Timestamp!`)
+  """
+  dueDate_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `dueDate` (✨ Generated from Field `Assignment`.`dueDate` of type `Timestamp!`)
+  """
+  dueDate_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `Assignment`.`isCompleted` of type `Boolean!`
+  """
+  isCompleted: Boolean
+  """
+  ✨ `_expr` server value variant of `isCompleted` (✨ Generated from Field `Assignment`.`isCompleted` of type `Boolean!`)
+  """
+  isCompleted_expr: Boolean_Expr
+  """
+  ✨ Generated from Field `Assignment`.`pointsPossible` of type `Int`
+  """
+  pointsPossible: Int
+  """
+  ✨ `_expr` server value variant of `pointsPossible` (✨ Generated from Field `Assignment`.`pointsPossible` of type `Int`)
+  """
+  pointsPossible_expr: Int_Expr
+  """
+  ✨ `_update` server value variant of `pointsPossible` (✨ Generated from Field `Assignment`.`pointsPossible` of type `Int`)
+  """
+  pointsPossible_update: [Int_Update!]
+  """
+  ✨ Generated from Field `Assignment`.`title` of type `String!`
+  """
+  title: String
+  """
+  ✨ `_expr` server value variant of `title` (✨ Generated from Field `Assignment`.`title` of type `String!`)
+  """
+  title_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'Assignment'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Assignment_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Assignment_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Assignment_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Assignment_Filter!]
+  """
+  ✨ Generated from Field `Assignment`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `Assignment`.`classId` of type `UUID!`
+  """
+  classId: UUID_Filter
+  """
+  ✨ Generated from Field `Assignment`.`userId` of type `UUID!`
+  """
+  userId: UUID_Filter
+  """
+  ✨ Generated from Field `Assignment`.`class` of type `Class!`
+  """
+  class: Class_Filter
+  """
+  ✨ Generated from Field `Assignment`.`user` of type `User!`
+  """
+  user: User_Filter
+  """
+  ✨ Generated from Field `Assignment`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `Assignment`.`description` of type `String`
+  """
+  description: String_Filter
+  """
+  ✨ Generated from Field `Assignment`.`dueDate` of type `Timestamp!`
+  """
+  dueDate: Timestamp_Filter
+  """
+  ✨ Generated from Field `Assignment`.`isCompleted` of type `Boolean!`
+  """
+  isCompleted: Boolean_Filter
+  """
+  ✨ Generated from Field `Assignment`.`pointsPossible` of type `Int`
+  """
+  pointsPossible: Int_Filter
+  """
+  ✨ Generated from Field `Assignment`.`title` of type `String!`
+  """
+  title: String_Filter
+  """
+  ✨ Generated from Field `Assignment`.`attachments_on_assignment` of type `[Attachment!]!`
+  """
+  attachments_on_assignment: Attachment_ListFilter
+  """
+  ✨ Generated from Field `Assignment`.`reminders_on_assignment` of type `[Reminder!]!`
+  """
+  reminders_on_assignment: Reminder_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'Assignment'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Assignment_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Assignment_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Assignment_Filter
+}
+"""
+✨ Generated having input type for table 'Assignment'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Assignment_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [Assignment_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: Assignment_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [Assignment_Having!]
+  """
+  ✨ Generated from Field `Assignment`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `Assignment`.`classId_count` of type `Int!`
+  """
+  classId_count: Int_Filter
+  """
+  ✨ Generated from Field `Assignment`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: Int_Filter
+  """
+  ✨ Generated from Field `Assignment`.`description_count` of type `Int!`
+  """
+  description_count: Int_Filter
+  """
+  ✨ Generated from Field `Assignment`.`dueDate_count` of type `Int!`
+  """
+  dueDate_count: Int_Filter
+  """
+  ✨ Generated from Field `Assignment`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `Assignment`.`isCompleted_count` of type `Int!`
+  """
+  isCompleted_count: Int_Filter
+  """
+  ✨ Generated from Field `Assignment`.`pointsPossible_count` of type `Int!`
+  """
+  pointsPossible_count: Int_Filter
+  """
+  ✨ Generated from Field `Assignment`.`title_count` of type `Int!`
+  """
+  title_count: Int_Filter
+  """
+  ✨ Generated from Field `Assignment`.`userId_count` of type `Int!`
+  """
+  userId_count: Int_Filter
+  """
+  ✨ Generated from Field `Assignment`.`pointsPossible_sum` of type `Int`
+  """
+  pointsPossible_sum: Int_Filter
+  """
+  ✨ Generated from Field `Assignment`.`pointsPossible_avg` of type `Float`
+  """
+  pointsPossible_avg: Float_Filter
+  """
+  ✨ Generated from Field `Assignment`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `Assignment`.`dueDate_min` of type `Timestamp`
+  """
+  dueDate_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `Assignment`.`pointsPossible_min` of type `Int`
+  """
+  pointsPossible_min: Int_Filter
+  """
+  ✨ Generated from Field `Assignment`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: Timestamp_Filter
+  """
+  ✨ Generated from Field `Assignment`.`dueDate_max` of type `Timestamp`
+  """
+  dueDate_max: Timestamp_Filter
+  """
+  ✨ Generated from Field `Assignment`.`pointsPossible_max` of type `Int`
+  """
+  pointsPossible_max: Int_Filter
+}
+"""
+✨ Generated key input type for table 'Assignment'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Assignment_Key {
+  """
+  ✨ Generated from Field `Assignment`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Assignment`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'Assignment'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Assignment_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Assignment_Filter
+}
+"""
+✨ Generated order input type for table 'Assignment'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Assignment_Order {
+  """
+  ✨ Generated from Field `Assignment`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`classId` of type `UUID!`
+  """
+  classId: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`userId` of type `UUID!`
+  """
+  userId: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`class` of type `Class!`
+  """
+  class: Class_Order
+  """
+  ✨ Generated from Field `Assignment`.`user` of type `User!`
+  """
+  user: User_Order
+  """
+  ✨ Generated from Field `Assignment`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`description` of type `String`
+  """
+  description: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`dueDate` of type `Timestamp!`
+  """
+  dueDate: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`isCompleted` of type `Boolean!`
+  """
+  isCompleted: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`pointsPossible` of type `Int`
+  """
+  pointsPossible: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`title` of type `String!`
+  """
+  title: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`classId_count` of type `Int!`
+  """
+  classId_count: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`description_count` of type `Int!`
+  """
+  description_count: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`dueDate_count` of type `Int!`
+  """
+  dueDate_count: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`isCompleted_count` of type `Int!`
+  """
+  isCompleted_count: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`pointsPossible_count` of type `Int!`
+  """
+  pointsPossible_count: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`title_count` of type `Int!`
+  """
+  title_count: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`userId_count` of type `Int!`
+  """
+  userId_count: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`pointsPossible_sum` of type `Int`
+  """
+  pointsPossible_sum: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`pointsPossible_avg` of type `Float`
+  """
+  pointsPossible_avg: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`dueDate_min` of type `Timestamp`
+  """
+  dueDate_min: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`pointsPossible_min` of type `Int`
+  """
+  pointsPossible_min: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`dueDate_max` of type `Timestamp`
+  """
+  dueDate_max: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`pointsPossible_max` of type `Int`
+  """
+  pointsPossible_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'Attachment'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Attachment_Data {
+  """
+  ✨ Generated from Field `Attachment`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Attachment`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Attachment`.`assignmentId` of type `UUID`
+  """
+  assignmentId: UUID
+  """
+  ✨ `_expr` server value variant of `assignmentId` (✨ Generated from Field `Attachment`.`assignmentId` of type `UUID`)
+  """
+  assignmentId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Attachment`.`classId` of type `UUID`
+  """
+  classId: UUID
+  """
+  ✨ `_expr` server value variant of `classId` (✨ Generated from Field `Attachment`.`classId` of type `UUID`)
+  """
+  classId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Attachment`.`userId` of type `UUID!`
+  """
+  userId: UUID
+  """
+  ✨ `_expr` server value variant of `userId` (✨ Generated from Field `Attachment`.`userId` of type `UUID!`)
+  """
+  userId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Attachment`.`assignment` of type `Assignment`
+  """
+  assignment: Assignment_Key
+  """
+  ✨ Generated from Field `Attachment`.`class` of type `Class`
+  """
+  class: Class_Key
+  """
+  ✨ Generated from Field `Attachment`.`user` of type `User!`
+  """
+  user: User_Key
+  """
+  ✨ Generated from Field `Attachment`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `createdAt` (✨ Generated from Field `Attachment`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `createdAt` (✨ Generated from Field `Attachment`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `createdAt` (✨ Generated from Field `Attachment`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `Attachment`.`description` of type `String`
+  """
+  description: String
+  """
+  ✨ `_expr` server value variant of `description` (✨ Generated from Field `Attachment`.`description` of type `String`)
+  """
+  description_expr: String_Expr
+  """
+  ✨ Generated from Field `Attachment`.`fileType` of type `String!`
+  """
+  fileType: String
+  """
+  ✨ `_expr` server value variant of `fileType` (✨ Generated from Field `Attachment`.`fileType` of type `String!`)
+  """
+  fileType_expr: String_Expr
+  """
+  ✨ Generated from Field `Attachment`.`fileUrl` of type `String!`
+  """
+  fileUrl: String
+  """
+  ✨ `_expr` server value variant of `fileUrl` (✨ Generated from Field `Attachment`.`fileUrl` of type `String!`)
+  """
+  fileUrl_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'Attachment'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Attachment_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Attachment_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Attachment_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Attachment_Filter!]
+  """
+  ✨ Generated from Field `Attachment`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `Attachment`.`assignmentId` of type `UUID`
+  """
+  assignmentId: UUID_Filter
+  """
+  ✨ Generated from Field `Attachment`.`classId` of type `UUID`
+  """
+  classId: UUID_Filter
+  """
+  ✨ Generated from Field `Attachment`.`userId` of type `UUID!`
+  """
+  userId: UUID_Filter
+  """
+  ✨ Generated from Field `Attachment`.`assignment` of type `Assignment`
+  """
+  assignment: Assignment_Filter
+  """
+  ✨ Generated from Field `Attachment`.`class` of type `Class`
+  """
+  class: Class_Filter
+  """
+  ✨ Generated from Field `Attachment`.`user` of type `User!`
+  """
+  user: User_Filter
+  """
+  ✨ Generated from Field `Attachment`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `Attachment`.`description` of type `String`
+  """
+  description: String_Filter
+  """
+  ✨ Generated from Field `Attachment`.`fileType` of type `String!`
+  """
+  fileType: String_Filter
+  """
+  ✨ Generated from Field `Attachment`.`fileUrl` of type `String!`
+  """
+  fileUrl: String_Filter
+}
+"""
+✨ Generated first-row input type for table 'Attachment'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Attachment_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Attachment_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Attachment_Filter
+}
+"""
+✨ Generated having input type for table 'Attachment'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Attachment_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [Attachment_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: Attachment_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [Attachment_Having!]
+  """
+  ✨ Generated from Field `Attachment`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `Attachment`.`assignmentId_count` of type `Int!`
+  """
+  assignmentId_count: Int_Filter
+  """
+  ✨ Generated from Field `Attachment`.`classId_count` of type `Int!`
+  """
+  classId_count: Int_Filter
+  """
+  ✨ Generated from Field `Attachment`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: Int_Filter
+  """
+  ✨ Generated from Field `Attachment`.`description_count` of type `Int!`
+  """
+  description_count: Int_Filter
+  """
+  ✨ Generated from Field `Attachment`.`fileType_count` of type `Int!`
+  """
+  fileType_count: Int_Filter
+  """
+  ✨ Generated from Field `Attachment`.`fileUrl_count` of type `Int!`
+  """
+  fileUrl_count: Int_Filter
+  """
+  ✨ Generated from Field `Attachment`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `Attachment`.`userId_count` of type `Int!`
+  """
+  userId_count: Int_Filter
+  """
+  ✨ Generated from Field `Attachment`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `Attachment`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: Timestamp_Filter
+}
+"""
+✨ Generated key input type for table 'Attachment'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Attachment_Key {
+  """
+  ✨ Generated from Field `Attachment`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Attachment`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'Attachment'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Attachment_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Attachment_Filter
+}
+"""
+✨ Generated order input type for table 'Attachment'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Attachment_Order {
+  """
+  ✨ Generated from Field `Attachment`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Attachment`.`assignmentId` of type `UUID`
+  """
+  assignmentId: OrderDirection
+  """
+  ✨ Generated from Field `Attachment`.`classId` of type `UUID`
+  """
+  classId: OrderDirection
+  """
+  ✨ Generated from Field `Attachment`.`userId` of type `UUID!`
+  """
+  userId: OrderDirection
+  """
+  ✨ Generated from Field `Attachment`.`assignment` of type `Assignment`
+  """
+  assignment: Assignment_Order
+  """
+  ✨ Generated from Field `Attachment`.`class` of type `Class`
+  """
+  class: Class_Order
+  """
+  ✨ Generated from Field `Attachment`.`user` of type `User!`
+  """
+  user: User_Order
+  """
+  ✨ Generated from Field `Attachment`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: OrderDirection
+  """
+  ✨ Generated from Field `Attachment`.`description` of type `String`
+  """
+  description: OrderDirection
+  """
+  ✨ Generated from Field `Attachment`.`fileType` of type `String!`
+  """
+  fileType: OrderDirection
+  """
+  ✨ Generated from Field `Attachment`.`fileUrl` of type `String!`
+  """
+  fileUrl: OrderDirection
+  """
+  ✨ Generated from Field `Attachment`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `Attachment`.`assignmentId_count` of type `Int!`
+  """
+  assignmentId_count: OrderDirection
+  """
+  ✨ Generated from Field `Attachment`.`classId_count` of type `Int!`
+  """
+  classId_count: OrderDirection
+  """
+  ✨ Generated from Field `Attachment`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: OrderDirection
+  """
+  ✨ Generated from Field `Attachment`.`description_count` of type `Int!`
+  """
+  description_count: OrderDirection
+  """
+  ✨ Generated from Field `Attachment`.`fileType_count` of type `Int!`
+  """
+  fileType_count: OrderDirection
+  """
+  ✨ Generated from Field `Attachment`.`fileUrl_count` of type `Int!`
+  """
+  fileUrl_count: OrderDirection
+  """
+  ✨ Generated from Field `Attachment`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `Attachment`.`userId_count` of type `Int!`
+  """
+  userId_count: OrderDirection
+  """
+  ✨ Generated from Field `Attachment`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: OrderDirection
+  """
+  ✨ Generated from Field `Attachment`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'Class'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Class_Data {
+  """
+  ✨ Generated from Field `Class`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Class`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Class`.`userId` of type `UUID!`
+  """
+  userId: UUID
+  """
+  ✨ `_expr` server value variant of `userId` (✨ Generated from Field `Class`.`userId` of type `UUID!`)
+  """
+  userId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Class`.`user` of type `User!`
+  """
+  user: User_Key
+  """
+  ✨ Generated from Field `Class`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `createdAt` (✨ Generated from Field `Class`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `createdAt` (✨ Generated from Field `Class`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `createdAt` (✨ Generated from Field `Class`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `Class`.`description` of type `String`
+  """
+  description: String
+  """
+  ✨ `_expr` server value variant of `description` (✨ Generated from Field `Class`.`description` of type `String`)
+  """
+  description_expr: String_Expr
+  """
+  ✨ Generated from Field `Class`.`instructor` of type `String`
+  """
+  instructor: String
+  """
+  ✨ `_expr` server value variant of `instructor` (✨ Generated from Field `Class`.`instructor` of type `String`)
+  """
+  instructor_expr: String_Expr
+  """
+  ✨ Generated from Field `Class`.`meetingTime` of type `String`
+  """
+  meetingTime: String
+  """
+  ✨ `_expr` server value variant of `meetingTime` (✨ Generated from Field `Class`.`meetingTime` of type `String`)
+  """
+  meetingTime_expr: String_Expr
+  """
+  ✨ Generated from Field `Class`.`name` of type `String!`
+  """
+  name: String
+  """
+  ✨ `_expr` server value variant of `name` (✨ Generated from Field `Class`.`name` of type `String!`)
+  """
+  name_expr: String_Expr
+  """
+  ✨ Generated from Field `Class`.`roomNumber` of type `String`
+  """
+  roomNumber: String
+  """
+  ✨ `_expr` server value variant of `roomNumber` (✨ Generated from Field `Class`.`roomNumber` of type `String`)
+  """
+  roomNumber_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'Class'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Class_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Class_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Class_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Class_Filter!]
+  """
+  ✨ Generated from Field `Class`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `Class`.`userId` of type `UUID!`
+  """
+  userId: UUID_Filter
+  """
+  ✨ Generated from Field `Class`.`user` of type `User!`
+  """
+  user: User_Filter
+  """
+  ✨ Generated from Field `Class`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `Class`.`description` of type `String`
+  """
+  description: String_Filter
+  """
+  ✨ Generated from Field `Class`.`instructor` of type `String`
+  """
+  instructor: String_Filter
+  """
+  ✨ Generated from Field `Class`.`meetingTime` of type `String`
+  """
+  meetingTime: String_Filter
+  """
+  ✨ Generated from Field `Class`.`name` of type `String!`
+  """
+  name: String_Filter
+  """
+  ✨ Generated from Field `Class`.`roomNumber` of type `String`
+  """
+  roomNumber: String_Filter
+  """
+  ✨ Generated from Field `Class`.`assignments_on_class` of type `[Assignment!]!`
+  """
+  assignments_on_class: Assignment_ListFilter
+  """
+  ✨ Generated from Field `Class`.`attachments_on_class` of type `[Attachment!]!`
+  """
+  attachments_on_class: Attachment_ListFilter
+  """
+  ✨ Generated from Field `Class`.`reminders_on_class` of type `[Reminder!]!`
+  """
+  reminders_on_class: Reminder_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'Class'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Class_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Class_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Class_Filter
+}
+"""
+✨ Generated having input type for table 'Class'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Class_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [Class_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: Class_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [Class_Having!]
+  """
+  ✨ Generated from Field `Class`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `Class`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: Int_Filter
+  """
+  ✨ Generated from Field `Class`.`description_count` of type `Int!`
+  """
+  description_count: Int_Filter
+  """
+  ✨ Generated from Field `Class`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `Class`.`instructor_count` of type `Int!`
+  """
+  instructor_count: Int_Filter
+  """
+  ✨ Generated from Field `Class`.`meetingTime_count` of type `Int!`
+  """
+  meetingTime_count: Int_Filter
+  """
+  ✨ Generated from Field `Class`.`name_count` of type `Int!`
+  """
+  name_count: Int_Filter
+  """
+  ✨ Generated from Field `Class`.`roomNumber_count` of type `Int!`
+  """
+  roomNumber_count: Int_Filter
+  """
+  ✨ Generated from Field `Class`.`userId_count` of type `Int!`
+  """
+  userId_count: Int_Filter
+  """
+  ✨ Generated from Field `Class`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `Class`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: Timestamp_Filter
+}
+"""
+✨ Generated key input type for table 'Class'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Class_Key {
+  """
+  ✨ Generated from Field `Class`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Class`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'Class'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Class_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Class_Filter
+}
+"""
+✨ Generated order input type for table 'Class'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Class_Order {
+  """
+  ✨ Generated from Field `Class`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Class`.`userId` of type `UUID!`
+  """
+  userId: OrderDirection
+  """
+  ✨ Generated from Field `Class`.`user` of type `User!`
+  """
+  user: User_Order
+  """
+  ✨ Generated from Field `Class`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: OrderDirection
+  """
+  ✨ Generated from Field `Class`.`description` of type `String`
+  """
+  description: OrderDirection
+  """
+  ✨ Generated from Field `Class`.`instructor` of type `String`
+  """
+  instructor: OrderDirection
+  """
+  ✨ Generated from Field `Class`.`meetingTime` of type `String`
+  """
+  meetingTime: OrderDirection
+  """
+  ✨ Generated from Field `Class`.`name` of type `String!`
+  """
+  name: OrderDirection
+  """
+  ✨ Generated from Field `Class`.`roomNumber` of type `String`
+  """
+  roomNumber: OrderDirection
+  """
+  ✨ Generated from Field `Class`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `Class`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: OrderDirection
+  """
+  ✨ Generated from Field `Class`.`description_count` of type `Int!`
+  """
+  description_count: OrderDirection
+  """
+  ✨ Generated from Field `Class`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `Class`.`instructor_count` of type `Int!`
+  """
+  instructor_count: OrderDirection
+  """
+  ✨ Generated from Field `Class`.`meetingTime_count` of type `Int!`
+  """
+  meetingTime_count: OrderDirection
+  """
+  ✨ Generated from Field `Class`.`name_count` of type `Int!`
+  """
+  name_count: OrderDirection
+  """
+  ✨ Generated from Field `Class`.`roomNumber_count` of type `Int!`
+  """
+  roomNumber_count: OrderDirection
+  """
+  ✨ Generated from Field `Class`.`userId_count` of type `Int!`
+  """
+  userId_count: OrderDirection
+  """
+  ✨ Generated from Field `Class`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: OrderDirection
+  """
+  ✨ Generated from Field `Class`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'Reminder'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Reminder_Data {
+  """
+  ✨ Generated from Field `Reminder`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Reminder`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Reminder`.`assignmentId` of type `UUID`
+  """
+  assignmentId: UUID
+  """
+  ✨ `_expr` server value variant of `assignmentId` (✨ Generated from Field `Reminder`.`assignmentId` of type `UUID`)
+  """
+  assignmentId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Reminder`.`classId` of type `UUID`
+  """
+  classId: UUID
+  """
+  ✨ `_expr` server value variant of `classId` (✨ Generated from Field `Reminder`.`classId` of type `UUID`)
+  """
+  classId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Reminder`.`userId` of type `UUID!`
+  """
+  userId: UUID
+  """
+  ✨ `_expr` server value variant of `userId` (✨ Generated from Field `Reminder`.`userId` of type `UUID!`)
+  """
+  userId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Reminder`.`assignment` of type `Assignment`
+  """
+  assignment: Assignment_Key
+  """
+  ✨ Generated from Field `Reminder`.`class` of type `Class`
+  """
+  class: Class_Key
+  """
+  ✨ Generated from Field `Reminder`.`user` of type `User!`
+  """
+  user: User_Key
+  """
+  ✨ Generated from Field `Reminder`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `createdAt` (✨ Generated from Field `Reminder`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `createdAt` (✨ Generated from Field `Reminder`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `createdAt` (✨ Generated from Field `Reminder`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `Reminder`.`message` of type `String!`
+  """
+  message: String
+  """
+  ✨ `_expr` server value variant of `message` (✨ Generated from Field `Reminder`.`message` of type `String!`)
+  """
+  message_expr: String_Expr
+  """
+  ✨ Generated from Field `Reminder`.`reminderTime` of type `Timestamp!`
+  """
+  reminderTime: Timestamp
+  """
+  ✨ `_expr` server value variant of `reminderTime` (✨ Generated from Field `Reminder`.`reminderTime` of type `Timestamp!`)
+  """
+  reminderTime_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `reminderTime` (✨ Generated from Field `Reminder`.`reminderTime` of type `Timestamp!`)
+  """
+  reminderTime_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `reminderTime` (✨ Generated from Field `Reminder`.`reminderTime` of type `Timestamp!`)
+  """
+  reminderTime_update: [Timestamp_Update!]
+}
+"""
+✨ Generated filter input type for table 'Reminder'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Reminder_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Reminder_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Reminder_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Reminder_Filter!]
+  """
+  ✨ Generated from Field `Reminder`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `Reminder`.`assignmentId` of type `UUID`
+  """
+  assignmentId: UUID_Filter
+  """
+  ✨ Generated from Field `Reminder`.`classId` of type `UUID`
+  """
+  classId: UUID_Filter
+  """
+  ✨ Generated from Field `Reminder`.`userId` of type `UUID!`
+  """
+  userId: UUID_Filter
+  """
+  ✨ Generated from Field `Reminder`.`assignment` of type `Assignment`
+  """
+  assignment: Assignment_Filter
+  """
+  ✨ Generated from Field `Reminder`.`class` of type `Class`
+  """
+  class: Class_Filter
+  """
+  ✨ Generated from Field `Reminder`.`user` of type `User!`
+  """
+  user: User_Filter
+  """
+  ✨ Generated from Field `Reminder`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `Reminder`.`message` of type `String!`
+  """
+  message: String_Filter
+  """
+  ✨ Generated from Field `Reminder`.`reminderTime` of type `Timestamp!`
+  """
+  reminderTime: Timestamp_Filter
+}
+"""
+✨ Generated first-row input type for table 'Reminder'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Reminder_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Reminder_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Reminder_Filter
+}
+"""
+✨ Generated having input type for table 'Reminder'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Reminder_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [Reminder_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: Reminder_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [Reminder_Having!]
+  """
+  ✨ Generated from Field `Reminder`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `Reminder`.`assignmentId_count` of type `Int!`
+  """
+  assignmentId_count: Int_Filter
+  """
+  ✨ Generated from Field `Reminder`.`classId_count` of type `Int!`
+  """
+  classId_count: Int_Filter
+  """
+  ✨ Generated from Field `Reminder`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: Int_Filter
+  """
+  ✨ Generated from Field `Reminder`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `Reminder`.`message_count` of type `Int!`
+  """
+  message_count: Int_Filter
+  """
+  ✨ Generated from Field `Reminder`.`reminderTime_count` of type `Int!`
+  """
+  reminderTime_count: Int_Filter
+  """
+  ✨ Generated from Field `Reminder`.`userId_count` of type `Int!`
+  """
+  userId_count: Int_Filter
+  """
+  ✨ Generated from Field `Reminder`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `Reminder`.`reminderTime_min` of type `Timestamp`
+  """
+  reminderTime_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `Reminder`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: Timestamp_Filter
+  """
+  ✨ Generated from Field `Reminder`.`reminderTime_max` of type `Timestamp`
+  """
+  reminderTime_max: Timestamp_Filter
+}
+"""
+✨ Generated key input type for table 'Reminder'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Reminder_Key {
+  """
+  ✨ Generated from Field `Reminder`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Reminder`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'Reminder'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Reminder_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Reminder_Filter
+}
+"""
+✨ Generated order input type for table 'Reminder'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Reminder_Order {
+  """
+  ✨ Generated from Field `Reminder`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Reminder`.`assignmentId` of type `UUID`
+  """
+  assignmentId: OrderDirection
+  """
+  ✨ Generated from Field `Reminder`.`classId` of type `UUID`
+  """
+  classId: OrderDirection
+  """
+  ✨ Generated from Field `Reminder`.`userId` of type `UUID!`
+  """
+  userId: OrderDirection
+  """
+  ✨ Generated from Field `Reminder`.`assignment` of type `Assignment`
+  """
+  assignment: Assignment_Order
+  """
+  ✨ Generated from Field `Reminder`.`class` of type `Class`
+  """
+  class: Class_Order
+  """
+  ✨ Generated from Field `Reminder`.`user` of type `User!`
+  """
+  user: User_Order
+  """
+  ✨ Generated from Field `Reminder`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: OrderDirection
+  """
+  ✨ Generated from Field `Reminder`.`message` of type `String!`
+  """
+  message: OrderDirection
+  """
+  ✨ Generated from Field `Reminder`.`reminderTime` of type `Timestamp!`
+  """
+  reminderTime: OrderDirection
+  """
+  ✨ Generated from Field `Reminder`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `Reminder`.`assignmentId_count` of type `Int!`
+  """
+  assignmentId_count: OrderDirection
+  """
+  ✨ Generated from Field `Reminder`.`classId_count` of type `Int!`
+  """
+  classId_count: OrderDirection
+  """
+  ✨ Generated from Field `Reminder`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: OrderDirection
+  """
+  ✨ Generated from Field `Reminder`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `Reminder`.`message_count` of type `Int!`
+  """
+  message_count: OrderDirection
+  """
+  ✨ Generated from Field `Reminder`.`reminderTime_count` of type `Int!`
+  """
+  reminderTime_count: OrderDirection
+  """
+  ✨ Generated from Field `Reminder`.`userId_count` of type `Int!`
+  """
+  userId_count: OrderDirection
+  """
+  ✨ Generated from Field `Reminder`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: OrderDirection
+  """
+  ✨ Generated from Field `Reminder`.`reminderTime_min` of type `Timestamp`
+  """
+  reminderTime_min: OrderDirection
+  """
+  ✨ Generated from Field `Reminder`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: OrderDirection
+  """
+  ✨ Generated from Field `Reminder`.`reminderTime_max` of type `Timestamp`
+  """
+  reminderTime_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'User'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input User_Data {
+  """
+  ✨ Generated from Field `User`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `User`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `User`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `createdAt` (✨ Generated from Field `User`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `createdAt` (✨ Generated from Field `User`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `createdAt` (✨ Generated from Field `User`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `User`.`displayName` of type `String!`
+  """
+  displayName: String
+  """
+  ✨ `_expr` server value variant of `displayName` (✨ Generated from Field `User`.`displayName` of type `String!`)
+  """
+  displayName_expr: String_Expr
+  """
+  ✨ Generated from Field `User`.`email` of type `String`
+  """
+  email: String
+  """
+  ✨ `_expr` server value variant of `email` (✨ Generated from Field `User`.`email` of type `String`)
+  """
+  email_expr: String_Expr
+  """
+  ✨ Generated from Field `User`.`photoUrl` of type `String`
+  """
+  photoUrl: String
+  """
+  ✨ `_expr` server value variant of `photoUrl` (✨ Generated from Field `User`.`photoUrl` of type `String`)
+  """
+  photoUrl_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'User'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input User_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [User_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: User_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [User_Filter!]
+  """
+  ✨ Generated from Field `User`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `User`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `User`.`displayName` of type `String!`
+  """
+  displayName: String_Filter
+  """
+  ✨ Generated from Field `User`.`email` of type `String`
+  """
+  email: String_Filter
+  """
+  ✨ Generated from Field `User`.`photoUrl` of type `String`
+  """
+  photoUrl: String_Filter
+  """
+  ✨ Generated from Field `User`.`assignments_on_user` of type `[Assignment!]!`
+  """
+  assignments_on_user: Assignment_ListFilter
+  """
+  ✨ Generated from Field `User`.`attachments_on_user` of type `[Attachment!]!`
+  """
+  attachments_on_user: Attachment_ListFilter
+  """
+  ✨ Generated from Field `User`.`classes_on_user` of type `[Class!]!`
+  """
+  classes_on_user: Class_ListFilter
+  """
+  ✨ Generated from Field `User`.`reminders_on_user` of type `[Reminder!]!`
+  """
+  reminders_on_user: Reminder_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'User'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input User_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [User_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: User_Filter
+}
+"""
+✨ Generated having input type for table 'User'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input User_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [User_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: User_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [User_Having!]
+  """
+  ✨ Generated from Field `User`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`displayName_count` of type `Int!`
+  """
+  displayName_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`email_count` of type `Int!`
+  """
+  email_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`photoUrl_count` of type `Int!`
+  """
+  photoUrl_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `User`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: Timestamp_Filter
+}
+"""
+✨ Generated key input type for table 'User'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input User_Key {
+  """
+  ✨ Generated from Field `User`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `User`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'User'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input User_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: User_Filter
+}
+"""
+✨ Generated order input type for table 'User'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input User_Order {
+  """
+  ✨ Generated from Field `User`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `User`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: OrderDirection
+  """
+  ✨ Generated from Field `User`.`displayName` of type `String!`
+  """
+  displayName: OrderDirection
+  """
+  ✨ Generated from Field `User`.`email` of type `String`
+  """
+  email: OrderDirection
+  """
+  ✨ Generated from Field `User`.`photoUrl` of type `String`
+  """
+  photoUrl: OrderDirection
+  """
+  ✨ Generated from Field `User`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`displayName_count` of type `Int!`
+  """
+  displayName_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`email_count` of type `Int!`
+  """
+  email_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`photoUrl_count` of type `Int!`
+  """
+  photoUrl_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: OrderDirection
+  """
+  ✨ Generated from Field `User`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: OrderDirection
+}

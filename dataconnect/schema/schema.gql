@@ -1,0 +1,46 @@
+type User @table {
+  displayName: String!
+  createdAt: Timestamp!
+  email: String
+  photoUrl: String
+}
+
+type Class @table {
+  user: User!
+  name: String!
+  createdAt: Timestamp!
+  description: String
+  instructor: String
+  roomNumber: String
+  meetingTime: String
+}
+
+type Assignment @table {
+  user: User!
+  class: Class!
+  title: String!
+  dueDate: Timestamp!
+  isCompleted: Boolean!
+  createdAt: Timestamp!
+  description: String
+  pointsPossible: Int
+}
+
+type Reminder @table {
+  user: User!
+  reminderTime: Timestamp!
+  message: String!
+  createdAt: Timestamp!
+  assignment: Assignment
+  class: Class
+}
+
+type Attachment @table {
+  user: User!
+  fileUrl: String!
+  fileType: String!
+  createdAt: Timestamp!
+  description: String
+  assignment: Assignment
+  class: Class
+}

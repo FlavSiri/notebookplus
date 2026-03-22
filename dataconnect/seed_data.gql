@@ -1,0 +1,73 @@
+mutation CreateDemoData @transaction @auth(level: USER, insecureReason: "This operation is safe to expose to all logged in users.") {
+  user1: user_insert(data: {
+    id: "550e8400-e29b-41d4-a716-446655440000",
+    displayName: "Alice Smith",
+    email: "alice.smith@example.com",
+    createdAt: "2023-01-15T10:00:00Z"
+  })
+  user2: user_insert(data: {
+    id: "550e8400-e29b-41d4-a716-446655440001",
+    displayName: "Bob Johnson",
+    email: "bob.johnson@example.com",
+    createdAt: "2023-01-20T11:00:00Z"
+  })
+  class1: class_insert(data: {
+    id: "550e8400-e29b-41d4-a716-446655440002",
+    userId: "550e8400-e29b-41d4-a716-446655440000",
+    name: "Introduction to GraphQL",
+    description: "A beginner-friendly course on GraphQL.",
+    instructor: "Alice Smith",
+    meetingTime: "Mon/Wed 10:00 AM",
+    roomNumber: "Rm 101",
+    createdAt: "2023-02-01T09:00:00Z"
+  })
+  class2: class_insert(data: {
+    id: "550e8400-e29b-41d4-a716-446655440003",
+    userId: "550e8400-e29b-41d4-a716-446655440001",
+    name: "Advanced Data Structures",
+    description: "In-depth study of complex data structures.",
+    instructor: "Bob Johnson",
+    meetingTime: "Tue/Thu 01:00 PM",
+    roomNumber: "Rm 203",
+    createdAt: "2023-02-05T13:00:00Z"
+  })
+  assignment1: assignment_insert(data: {
+    id: "550e8400-e29b-41d4-a716-446655440004",
+    userId: "550e8400-e29b-41d4-a716-446655440000",
+    classId: "550e8400-e29b-41d4-a716-446655440002",
+    title: "GraphQL Basics Homework",
+    description: "Implement a simple GraphQL server.",
+    dueDate: "2023-03-01T23:59:59Z",
+    isCompleted: false,
+    pointsPossible: 100,
+    createdAt: "2023-02-10T10:00:00Z"
+  })
+  assignment2: assignment_insert(data: {
+    id: "550e8400-e29b-41d4-a716-446655440005",
+    userId: "550e8400-e29b-41d4-a716-446655440001",
+    classId: "550e8400-e29b-41d4-a716-446655440003",
+    title: "Graph Algorithms Project",
+    description: "Design and implement a graph algorithm.",
+    dueDate: "2023-03-15T23:59:59Z",
+    isCompleted: false,
+    pointsPossible: 150,
+    createdAt: "2023-02-12T14:00:00Z"
+  })
+  attachment1: attachment_insert(data: {
+    id: "550e8400-e29b-41d4-a716-446655440006",
+    userId: "550e8400-e29b-41d4-a716-446655440000",
+    assignmentId: "550e8400-e29b-41d4-a716-446655440004",
+    fileUrl: "https://example.com/graphql_basics.pdf",
+    fileType: "application/pdf",
+    description: "Assignment instructions",
+    createdAt: "2023-02-11T09:30:00Z"
+  })
+  reminder1: reminder_insert(data: {
+    id: "550e8400-e29b-41d4-a716-446655440007",
+    userId: "550e8400-e29b-41d4-a716-446655440000",
+    assignmentId: "550e8400-e29b-41d4-a716-446655440004",
+    reminderTime: "2023-02-28T18:00:00Z",
+    message: "Don't forget the GraphQL assignment!",
+    createdAt: "2023-02-20T10:00:00Z"
+  })
+}

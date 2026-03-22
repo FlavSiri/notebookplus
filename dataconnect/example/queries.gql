@@ -1,0 +1,47 @@
+query GetUserProfile @auth(level: USER) {
+  user(key: {id_expr: "auth.uid"}) {
+    id
+    displayName
+    email
+    photoUrl
+    createdAt
+  }
+}
+
+query ListUserClasses @auth(level: USER) {
+  classes(where: {userId: {eq_expr: "auth.uid"}}) {
+    id
+    name
+    description
+    instructor
+    roomNumber
+    meetingTime
+    createdAt
+  }
+}
+
+mutation CreateNewClass($name: String!, $description: String, $instructor: String, $roomNumber: String, $meetingTime: String) @auth(level: USER) {
+  class_insert(data: {
+    userId_expr: "auth.uid",
+    name: $name,
+    description: $description,
+    instructor: $instructor,
+    roomNumber: $roomNumber,
+    meetingTime: $meetingTime,
+    createdAt_expr: "request.time"
+  }) {
+    id
+  }
+}
+
+mutation UpdateAssignmentCompletion($assignmentId: UUID!, $isCompleted: Boolean!) @auth(level: USER) {
+  assignment_update(
+    key: {id: $assignmentId},
+    data: {
+      isCompleted: $isCompleted
+    },
+    where: {userId: {eq_expr: "auth.uid"}} # Ensure only the owner can update their assignments
+  ) {
+    id
+  }
+}

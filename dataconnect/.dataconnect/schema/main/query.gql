@@ -1,0 +1,267 @@
+extend type Query {
+  """
+  ✨ Look up a single `Assignment` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  assignment(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Assignment_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Assignment_FirstRow
+  ): Assignment @fdc_generated(from: "Assignment", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `Attachment` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  attachment(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Attachment_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Attachment_FirstRow
+  ): Attachment @fdc_generated(from: "Attachment", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `Class` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  class(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Class_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Class_FirstRow
+  ): Class @fdc_generated(from: "Class", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `Reminder` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  reminder(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Reminder_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Reminder_FirstRow
+  ): Reminder @fdc_generated(from: "Reminder", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `User` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  user(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: User_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: User_FirstRow
+  ): User @fdc_generated(from: "User", purpose: QUERY_SINGLE)
+  """
+  ✨ List `Assignment` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  assignments(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Assignment_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Assignment_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Assignment_Having
+  ): [Assignment!]! @fdc_generated(from: "Assignment", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `Attachment` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  attachments(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Attachment_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Attachment_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Attachment_Having
+  ): [Attachment!]! @fdc_generated(from: "Attachment", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `Class` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  classes(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Class_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Class_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Class_Having
+  ): [Class!]! @fdc_generated(from: "Class", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `Reminder` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  reminders(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Reminder_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Reminder_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Reminder_Having
+  ): [Reminder!]! @fdc_generated(from: "Reminder", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `User` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  users(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: User_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [User_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: User_Having
+  ): [User!]! @fdc_generated(from: "User", purpose: QUERY_MULTIPLE)
+}

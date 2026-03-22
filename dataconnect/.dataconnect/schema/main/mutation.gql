@@ -1,0 +1,562 @@
+extend type Mutation {
+  """
+  ✨ Insert a single `Assignment` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  assignment_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: Assignment_Data!
+  ): Assignment_KeyOutput! @fdc_generated(from: "Assignment", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `Attachment` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  attachment_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: Attachment_Data!
+  ): Attachment_KeyOutput! @fdc_generated(from: "Attachment", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `Class` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  class_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: Class_Data!
+  ): Class_KeyOutput! @fdc_generated(from: "Class", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `Reminder` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  reminder_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: Reminder_Data!
+  ): Reminder_KeyOutput! @fdc_generated(from: "Reminder", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `User` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  user_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: User_Data!
+  ): User_KeyOutput! @fdc_generated(from: "User", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert `Assignment` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  assignment_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [Assignment_Data!]!
+  ): [Assignment_KeyOutput!]! @fdc_generated(from: "Assignment", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `Attachment` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  attachment_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [Attachment_Data!]!
+  ): [Attachment_KeyOutput!]! @fdc_generated(from: "Attachment", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `Class` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  class_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [Class_Data!]!
+  ): [Class_KeyOutput!]! @fdc_generated(from: "Class", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `Reminder` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  reminder_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [Reminder_Data!]!
+  ): [Reminder_KeyOutput!]! @fdc_generated(from: "Reminder", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `User` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  user_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [User_Data!]!
+  ): [User_KeyOutput!]! @fdc_generated(from: "User", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert or update a single `Assignment` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Assignment`.
+  """
+  assignment_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: Assignment_Data!
+  ): Assignment_KeyOutput! @fdc_generated(from: "Assignment", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `Attachment` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Attachment`.
+  """
+  attachment_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: Attachment_Data!
+  ): Attachment_KeyOutput! @fdc_generated(from: "Attachment", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `Class` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Class`.
+  """
+  class_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: Class_Data!
+  ): Class_KeyOutput! @fdc_generated(from: "Class", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `Reminder` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Reminder`.
+  """
+  reminder_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: Reminder_Data!
+  ): Reminder_KeyOutput! @fdc_generated(from: "Reminder", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `User` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `User`.
+  """
+  user_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: User_Data!
+  ): User_KeyOutput! @fdc_generated(from: "User", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update `Assignment` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Assignment`.
+  """
+  assignment_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [Assignment_Data!]!
+  ): [Assignment_KeyOutput!]! @fdc_generated(from: "Assignment", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `Attachment` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Attachment`.
+  """
+  attachment_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [Attachment_Data!]!
+  ): [Attachment_KeyOutput!]! @fdc_generated(from: "Attachment", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `Class` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Class`.
+  """
+  class_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [Class_Data!]!
+  ): [Class_KeyOutput!]! @fdc_generated(from: "Class", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `Reminder` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Reminder`.
+  """
+  reminder_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [Reminder_Data!]!
+  ): [Reminder_KeyOutput!]! @fdc_generated(from: "Reminder", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `User` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `User`.
+  """
+  user_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [User_Data!]!
+  ): [User_KeyOutput!]! @fdc_generated(from: "User", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Update a single `Assignment` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `Assignment` or `null` if not found.
+  """
+  assignment_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Assignment_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Assignment_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: Assignment_Data!
+  ): Assignment_KeyOutput @fdc_generated(from: "Assignment", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `Attachment` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `Attachment` or `null` if not found.
+  """
+  attachment_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Attachment_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Attachment_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: Attachment_Data!
+  ): Attachment_KeyOutput @fdc_generated(from: "Attachment", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `Class` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `Class` or `null` if not found.
+  """
+  class_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Class_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Class_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: Class_Data!
+  ): Class_KeyOutput @fdc_generated(from: "Class", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `Reminder` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `Reminder` or `null` if not found.
+  """
+  reminder_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Reminder_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Reminder_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: Reminder_Data!
+  ): Reminder_KeyOutput @fdc_generated(from: "Reminder", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `User` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `User` or `null` if not found.
+  """
+  user_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: User_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: User_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: User_Data!
+  ): User_KeyOutput @fdc_generated(from: "User", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update `Assignment` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  assignment_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: Assignment_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: Assignment_Data!
+  ): Int! @fdc_generated(from: "Assignment", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `Attachment` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  attachment_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: Attachment_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: Attachment_Data!
+  ): Int! @fdc_generated(from: "Attachment", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `Class` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  class_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: Class_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: Class_Data!
+  ): Int! @fdc_generated(from: "Class", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `Reminder` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  reminder_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: Reminder_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: Reminder_Data!
+  ): Int! @fdc_generated(from: "Reminder", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `User` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  user_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: User_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: User_Data!
+  ): Int! @fdc_generated(from: "User", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Delete a single `Assignment` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  assignment_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Assignment_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Assignment_FirstRow
+  ): Assignment_KeyOutput @fdc_generated(from: "Assignment", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `Attachment` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  attachment_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Attachment_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Attachment_FirstRow
+  ): Attachment_KeyOutput @fdc_generated(from: "Attachment", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `Class` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  class_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Class_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Class_FirstRow
+  ): Class_KeyOutput @fdc_generated(from: "Class", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `Reminder` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  reminder_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Reminder_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Reminder_FirstRow
+  ): Reminder_KeyOutput @fdc_generated(from: "Reminder", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `User` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  user_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: User_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: User_FirstRow
+  ): User_KeyOutput @fdc_generated(from: "User", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete `Assignment` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  assignment_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: Assignment_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "Assignment", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `Attachment` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  attachment_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: Attachment_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "Attachment", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `Class` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  class_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: Class_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "Class", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `Reminder` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  reminder_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: Reminder_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "Reminder", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `User` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  user_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: User_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "User", purpose: DELETE_MULTIPLE)
+}
